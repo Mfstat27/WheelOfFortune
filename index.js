@@ -156,24 +156,21 @@ guess.addEventListener("keydown", function(e){
 
 
 submitGuess.addEventListener("click", function(e) {
-    word.innerText = randomWord
+   
     let submission = guess.value
     if(submission === randomWord) {
         word.innerText = randomWord
         setTimeout(function(){
             window.confirm("YOU WON! Would you like to play again?")
-        }
-           
+        }  
         , 5000)
         
-        //location.reload()
+        
     }else {
         word.innerText = randomWord
         setTimeout(function() {
             window.confirm(`So sorry you didn't get it this time. :(  Would you like to play again?`)
         }
         , 5000)
-        
-        //location.reload()
     }
 })
