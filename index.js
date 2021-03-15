@@ -97,7 +97,7 @@ guesses.addEventListener("keydown", function(e){
     
 })
 
-const vowels = /[aeiouAEIOU]/ig
+const vowels = /[aeiou]/ig
 let askToGuessWord = document.createElement("p")
 askToGuessWord.innerText = "Guess the word"
 askToGuessWord.style.textAlign ="center"
@@ -129,7 +129,7 @@ submitGuesses.addEventListener("click", function(e){
     
     let afterGuesses
     const regexGuesses = new RegExp(`[^${guessesInput}rstlneRSTLNE]`,"g")
-    const nConsVowel = /[rstlneRSTLNE]/ig
+    const nConsVowel = /[rstlne]/ig
     if(guessesObj["consonant"]===3 && guessesObj["vowel"]===1){
         afterGuesses = randomWord.replaceAll(regexGuesses, "\\_") 
         word.innerText = afterGuesses
@@ -153,15 +153,17 @@ submitGuesses.addEventListener("click", function(e){
 guess.addEventListener("keydown", function(e){
     submitGuess.removeAttribute("disabled")
 })
+
+word.innerText = randomWord
 submitGuess.addEventListener("click", function(e) {
     
     let submission = guess.value
     if(submission === randomWord) {
-        word.innerText = randomWord
+        
         window.confirm("YOU WON! Would you like to play again?")
         location.reload()
     }else {
-        word.innerText = randomWord
+        
         window.confirm(`So sorry you didn't get it this time. :(  Would you like to play again?`)
         location.reload()
     }
