@@ -164,14 +164,14 @@ submitGuess.addEventListener("click", function(e) {
             window.alert("YOU WON!")
             location.reload()
         }  
-        , 3000)
+        , 1000)
           
     }else {
         word.innerText = randomWord
         setTimeout(function() {
             window.alert(`So sorry you didn't get it this time.`)
             location.reload()
-        }, 3000)
+        }, 1000)
     } 
           
 })
