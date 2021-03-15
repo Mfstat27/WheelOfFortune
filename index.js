@@ -163,7 +163,7 @@ submitGuess.addEventListener("click", function(e) {
         setTimeout(function(){
             window.confirm("YOU WON! Would you like to play again?")
             if(window.confirm){
-                location.reload
+                location.reload()
             }
         }  
         , 3000)
@@ -173,7 +173,7 @@ submitGuess.addEventListener("click", function(e) {
         setTimeout(function() {
             window.confirm(`So sorry you didn't get it this time. :(  Would you like to play again?`)
             if(window.confirm){
-                location.reload
+                location.reload()
             }
         }
         , 3000)
