@@ -135,6 +135,7 @@ submitGuesses.addEventListener("click", function(e){
         word.innerText = afterGuesses
         
     }else{
+       
         window.alert("sorry you must enter 3 consonants and 1 vowel")
     }
 
@@ -156,9 +157,11 @@ submitGuess.addEventListener("click", function(e) {
     
     let submission = guess.value
     if(submission === randomWord) {
+        word.innerText = randomWord
         window.confirm("YOU WON! Would you like to play again?")
         location.reload()
     }else {
+        word.innerText = randomWord
         window.confirm(`So sorry you didn't get it this time. :(  Would you like to play again?`)
         location.reload()
     }
