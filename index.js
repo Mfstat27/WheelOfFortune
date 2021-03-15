@@ -162,20 +162,22 @@ submitGuess.addEventListener("click", function(e) {
         word.innerText = randomWord
         setTimeout(function(){
             window.confirm("YOU WON! Would you like to play again?")
+            if(window.confirm){
+                location.reload
+            }
         }  
         , 3000)
-        
-        
+          
     }else {
         word.innerText = randomWord
         setTimeout(function() {
             window.confirm(`So sorry you didn't get it this time. :(  Would you like to play again?`)
-            location.reload
+            if(window.confirm){
+                location.reload
+            }
         }
         , 3000)
     }
 
-    if(window.confirm){
-        location.reload
-    }
+
 })
